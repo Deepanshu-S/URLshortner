@@ -1,0 +1,53 @@
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
+}
+
+
+p, h1	{font-family: 'Open Sans', sans-serif;}
+
+.input-group-addon {background-color: white;
+		border-right: white;}
+
+.navbar-inverse .navbar-brand:hover , .navbar-inverse .navbar-nav>li>a:hover
+{ color: #3b8dbd;
+}
+.formpad{
+margin-top: 10em;
+}
+.social li {
+		display: inline-block;
+}
+#socicon a:hover {	color: grey;
+}
+
+.new , .btn-group {
+		background-color: #3e3e3e;
+}
+.social .fa-facebook:hover {
+    color: #4060A5;
+}
+.social .fa-instagram:hover {
+    color: #e95950;
+}
+
+.social .fa-twitter:hover {
+    color: #00ABE3;
+}
+
+.social .fa-google-plus:hover {
+    color: #e64522;
+}
+
+.social .fa-linkedin:hover {
+    color: #0094BC;
+}
+
+.full {
+  background: #3e3e3e url(https://c1.staticflickr.com/9/8678/16516940918_6d888c2a5e_o.png) repeat ;
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
