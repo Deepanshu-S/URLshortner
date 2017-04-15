@@ -25,7 +25,7 @@ function checkprev(){
                       $result2 = $conn->query($sql);
 
                       if ($result2->num_rows > 0) {while($row = $result2->fetch_assoc()) {
-                        echo "<p><br>Long url, already exists:<br><strong id=\"textresp1\">iamds.tk/". $row["short"] ."</strong><br></p>"  ; }
+                        echo "<p><br>Long url already exists:<br><strong id=\"textresp1\">iamds.tk/". $row["short"] ."</strong><br></p>"  ; }
                       }
                       else { savetodb();}
                 }

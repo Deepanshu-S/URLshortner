@@ -26,7 +26,7 @@ if ( $num_results > 0  ) {
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: ". $url );
 	exit;
-} else {header("Location: ". "http://facebook.com/" );
+} else {header("Location: ". "http://iamds.tk/u/" );
     // redirect to submit page or short URL not found page.
 }
 mysql_close($con);
