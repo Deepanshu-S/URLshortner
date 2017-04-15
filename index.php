@@ -6,13 +6,12 @@ $dbname = "test";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
-
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
 
+$q = intval($_GET['q']);
 
 
 $string = 'newy';
@@ -54,7 +53,8 @@ $res = strtolower(preg_replace('/[^a-zA-Z0-9]/','', $string));
 
       function shorten(){//get a short path
           $uid = getid(); // generate random unique id
-          echo  "</br>" . $short =  base_convert($uid, 16, 32)."</br>" ;
+           $short =  base_convert($uid, 16, 32) ;
+           echo "<p>Short path: <strong>iamds.tk/$short</strong></p>";
         }
 
         shorten();

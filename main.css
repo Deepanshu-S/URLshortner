@@ -3,7 +3,11 @@ body {
 	margin-bottom: 50px;
 	background: none;
 }
+.glyphicon {
+		  color: cornflowerblue;}
 
+.btn{background-color: cornflowerblue;}
+.glyphicon-ok {  color: white;}
 
 p, h1	{font-family: 'Open Sans', sans-serif;}
 

@@ -12,7 +12,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
+    <script>
+    function sendlink() {
 
+      var str = document.getElementById("longurl").value;
+
+        if (str == "") {  alert("invoked");
+            document.getElementById("longurl").innerHTML = "";
+            return;
+        } else {
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("textresp").innerHTML = this.responseText;
+                }
+            };
+
+            xmlhttp.open("GET","index.php?q="+str,true);
+            xmlhttp.send();
+        }
+             return false;
+    }
+    </script>
 
     <title></title>
   </head>
@@ -63,20 +90,21 @@
                   <p>This is a simple URL shortner I made as a small project. It is based on: PHP for backend, HTML/CSS, bootstrap for front end. Feel free to use it.</br> And don't forget to show some love. <3 <br><br>
                   </p>
               </div>
-
-              <form class="form-horizontal">
+                <div class="col-md-12 col-sm-12">
+              <form name="urlform" onsubmit="sendlink()" action="#" class="form-horizontal" >
   <div class=""><!--form-group-->
     <!--<label class="control-label col-sm-2" for="email">Email:</label>-->
     <div class="col-sm-12 col-md-10 input-group formpad">
       <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
-      <input type="url" class="form-control" id="longurl" placeholder="Enter the URL to be shortened.">
+      <input type="text" class="form-control" id="longurl" placeholder="Enter the URL to be shortened.">
                 <span class="input-group-btn">
-                  <button type="submit" class="btn btn-default">
+                  <button type="submit"  class="btn btn-default" >
                   <span class="glyphicon glyphicon-ok"></span>
                   </button>
                 </span>
 
     </div>
+
     <div class=" col-sm-4 col-xs-6 col-md-4 input-group customshort">
       <span class="input-group-addon"><i class="glyphicon glyphicon-resize-small"></i></span>
       <input type="text" class="form-control" id="shorturl" placeholder="Custom short url">
@@ -92,9 +120,13 @@
             </div>
   </div>
 </form>
-
+</div>
           </div>
           <!-- /.row -->
+      </div>
+<div >
+      <span align="center" id="textresp"> <h1>Here</h1> </div>
+</div>
       </div>
 
   </body>
