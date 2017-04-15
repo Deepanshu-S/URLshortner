@@ -3,11 +3,20 @@ body {
 	margin-bottom: 50px;
 	background: none;
 }
+
+#copybtn{
+	display: none;
+	border-radius: 2px;
+	background-color: cornflowerblue ;
+}
 .glyphicon {
 		  color: cornflowerblue;}
 
 .btn{background-color: cornflowerblue;}
 .glyphicon-ok {  color: white;}
+.btn-sub:hover  > .glyphicon-ok { color: black;}
+
+.btn-sub:hover  { background-color: cornflowerblue;}
 
 p, h1	{font-family: 'Open Sans', sans-serif;}
 
